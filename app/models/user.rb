@@ -7,6 +7,7 @@ class User < ApplicationRecord
   # アソシエーション一覧
   has_many :post_images, dependent: :destroy
   has_many :post_comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   
   # 画像を取り込めるようにする記述
   has_one_attached :profile_image
